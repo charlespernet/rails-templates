@@ -1,7 +1,7 @@
 ## WIP On template to convert lewagon/rails-template to modern webpack
-# Next: Full templates to start with for projects weeks
+Next: Full templates to start with for projects weeks
 
-# How can you help ?
+## How can you help ?
   Try to run a rails new with lewagon/rails-templates devise or minimal
 
   ```
@@ -13,7 +13,9 @@
   ```
 
   from this repo run
-  `rails app:template LOCATION=http://example.com/template.rb`
+  ```
+  rails app:template \ LOCATION=https://raw.githubusercontent.com/charlespernet/rails-templates/master/lewagon_devise_to_modern_webpack.rb
+  ```
 
   Try to help me fix stuff !
 
