@@ -1,9 +1,14 @@
+# Code from lewagon to stop spring process ?
 run 'pgrep spring | xargs kill -9'
 
-# remove bootstrap-sass from the Gemfile of your project
+# remove bootstrap-sass and font-awesome-sass from the Gemfile of your project
+# Another approach would be to totally rewrite Gemfile but we'll lose gems installed by student
 # ====OSX Only====
 run "sed -i '' '/bootstrap-sass/d' Gemfile"
-run "sed -i '' '/font-awesome-sprockets/d' Gemfile"
+run "sed -i '' '/font-awesome-sass/d' Gemfile"
+# ===UNBUNTU (untested)====
+# run "sed '/bootstrap-sass/d' Gemfile"
+# run "sed '/font-awesome-sass/d' Gemfile"
 
 # Install Boostrap 4
 run 'yarn add bootstrap jquery popper.js turbolinks rails-ujs'
@@ -125,6 +130,7 @@ file 'app/frontend/packs/application.js', <<-JAVASCRIPT
 JAVASCRIPT
 
 # replace in `application.html`
+# WARNING ! Replace all layout this can break student work
 run 'rm app/views/layouts/application.html.erb'
 file 'app/views/layouts/application.html.erb', <<-HTML
 <!DOCTYPE html>
@@ -148,6 +154,7 @@ HTML
 
 # remove app/assets/stylesheets & app/assets/javascript folders
 # careful il you have existing javascript
+# WARNING ! Didn't move js (assuming there is not any yet)
 run 'rm -rf app/assets/stylesheets/'
 run 'rm -rf app/assets/javascripts/'
 
