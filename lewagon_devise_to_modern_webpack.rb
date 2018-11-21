@@ -1,11 +1,13 @@
 # Code from lewagon to stop spring process ?
 run 'pgrep spring | xargs kill -9'
 
-# remove bootstrap-sass and font-awesome-sass from the Gemfile of your project
+# remove sass Gems from the Gemfile of your project
 # Another approach would be to totally rewrite Gemfile but we'll lose gems installed by student
 # ====OSX Only====
 run "sed -i '' '/bootstrap-sass/d' Gemfile"
 run "sed -i '' '/font-awesome-sass/d' Gemfile"
+run "sed -i '' '/autoprefixer-rails/d' Gemfile"
+run "sed -i '' '/uglifier/d' Gemfile"
 # ===UNBUNTU (untested)====
 # run "sed '/bootstrap-sass/d' Gemfile"
 # run "sed '/font-awesome-sass/d' Gemfile"
