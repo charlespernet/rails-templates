@@ -1,3 +1,6 @@
+## THIS ONE IS NOT READY YET
+## NEED TO FIX THE lewagon_devise_to_modern_webpack FIRST
+
 run 'pgrep spring | xargs kill -9'
 
 # GEMFILE

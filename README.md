@@ -1,8 +1,8 @@
 ## WIP On template to convert lewagon/rails-template to modern webpack
-Next: Full templates to start with for projects weeks
+**What will come next ?** Full templates to start with for projects weeks
 
 ## How can you help ?
-  Try to run a rails new with lewagon/rails-templates devise or minimal
+  > Try to run a rails new with lewagon/rails-templates devise or minimal
 
   ```
   rails new \
@@ -12,12 +12,17 @@ Next: Full templates to start with for projects weeks
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
   ```
 
-  from this repo run
+  > from this repo run
   ```
-  rails app:template \ LOCATION=https://raw.githubusercontent.com/charlespernet/rails-templates/master/lewagon_devise_to_modern_webpack.rb
+  rails app:template \
+  LOCATION=https://raw.githubusercontent.com/charlespernet/rails-templates/master/lewagon_devise_to_modern_webpack.rb
   ```
 
   Try to help me fix stuff !
+
+  There is probably more gems to get rid of, and few more config steps to rip sprockets off.    
+  By now I think we should let images through sprockets as there is a bit more config to serve images through webpack
+  and it breaks default behavior from `image_tag`
 
 ## Process Followed
 
@@ -26,9 +31,13 @@ Next: Full templates to start with for projects weeks
   - bootstrap-sass
   - sassc-rails
 
+
 - Install Boostrap 4 via Yarn
   - also add jquery popper.js and rails-ujs
+
+
 - rename app/javascript to app/frontend
+
 - rename webpack entry point to app/frontend instead of app/javascript
 - Add Jquery and popper.js plugins to webpack environment.js and turbolinks maybe
 
