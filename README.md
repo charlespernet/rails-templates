@@ -1,8 +1,23 @@
 ## WIP On template to convert lewagon/rails-template to modern webpack
 # Next: Full templates to start with for projects weeks
 
+# How can you help ?
+  Try to run a rails new with lewagon/rails-templates devise or minimal
 
-## Process
+  ```
+  rails new \
+  --database postgresql \
+  --webpack \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/devise.rb \
+  CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
+  ```
+
+  from this repo run
+  `rails app:template LOCATION=http://example.com/template.rb`
+
+  Try to help me fix stuff !
+
+## Process Followed
 
 - Remove gems from your Gemfile :
   - font-awesome-sass
