@@ -7,6 +7,7 @@ run 'pgrep spring | xargs kill -9'
 run "sed -i '' '/bootstrap-sass/d' Gemfile"
 run "sed -i '' '/font-awesome-sass/d' Gemfile"
 run "sed -i '' '/autoprefixer-rails/d' Gemfile"
+run "sed -i '' '/sassc-rails/d' Gemfile"
 run "sed -i '' '/uglifier/d' Gemfile"
 # ===UNBUNTU (untested)====
 # run "sed '/bootstrap-sass/d' Gemfile"
